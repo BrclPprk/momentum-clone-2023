@@ -1,0 +1,123 @@
+#todo-form {
+  position: relative;
+}
+
+#todo-form input {
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 5px 12px;
+  border-radius: 14px;
+  border: none;
+  transition: width ease-in-out 1s;
+  width: 28px;
+  &:focus {
+    width: 300px;
+    &::placeholder {
+      color: rgb(180, 180, 180);
+      opacity: 1;
+    }
+  }
+  &::placeholder {
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+  }
+}
+
+#todo-form > i {
+  opacity: 0;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+#todo-form {
+  align-items: center;
+}
+
+#todo-list {
+  font-weight: 200;
+  margin-top: 40px;
+  position: absolute;
+  width: 300px;
+  height: 26vh;
+  overflow-y: scroll;
+  mask: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  /* transition: all 0.5s ease-in-out; why it doesn't work at scrollbar ㅠㅠ */
+
+  &::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 15px 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2em;
+    min-height: 25px;
+  }
+  &.on-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  &:first-child {
+    padding-top: 15px;
+    border-top: none;
+  }
+  &:last-child {
+    padding-bottom: 15px;
+  }
+}
+
+#todo-list li span {
+  width: 240px;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  text-wrap: nowrap;
+}
+
+#todo-list li span::-webkit-scrollbar {
+  display: none;
+}
+
+#todo-list li button {
+  background-color: transparent;
+  border-radius: 11px;
+  height: 22px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

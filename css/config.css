@@ -1,0 +1,98 @@
+.config {
+  position: fixed;
+  width: 100vw;
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
+  padding: 25px 35px;
+  z-index: 2;
+}
+
+.config > i {
+  cursor: pointer;
+}
+
+.config__list {
+  position: fixed;
+  top: 53px;
+  left: 1vw;
+  padding: 7px 5px;
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 1px;
+}
+
+.config__list--components {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0;
+  border-top: 1px solid #00000040;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+/* 스위치 */
+.switch__wrapper {
+  margin-left: 15px;
+  height: 20px;
+  display: flex;
+}
+
+.config__list--status {
+  margin-right: 5px;
+}
+
+.switch {
+  z-index: 99;
+  /* hidden */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch__label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+  background-color: #f0f0f0;
+  border: 1px solid black;
+  border-radius: 15px;
+  transition: 200ms;
+  transform: translateY(-3px);
+  &:hover {
+    background-color: #dddddd;
+  }
+}
+
+.onf__btn {
+  position: absolute;
+  top: 2px;
+  left: 2.7px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #414141;
+  transition: 0.2s;
+}
+
+.switch:checked + .switch__label {
+  background: #00a2ff;
+  border: 1px solid #00a2ff;
+  &:hover {
+    background: #3cb8ff;
+  }
+}
+
+.switch:checked + .switch__label .onf__btn {
+  left: 24.5px;
+  background: white;
+}

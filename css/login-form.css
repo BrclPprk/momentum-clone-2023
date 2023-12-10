@@ -1,0 +1,38 @@
+#login-form {
+  margin-top: 25px;
+}
+
+#login-form input:first-child {
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px white;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  &::placeholder {
+    color: white;
+  }
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
+
+#login-form input:last-child {
+  margin-left: 8px;
+  font-weight: 800;
+  padding: 8px;
+  border-radius: 17.5px;
+  background-color: #dfdfdf;
+  border: none;
+  transition: 300ms;
+  &:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+}
+
+#greeting {
+  margin: 15px 0 25px;
+  font-size: 35px;
+}

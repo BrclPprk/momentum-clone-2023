@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;400;600;800&display=swap");
+
+@import "reset.css";
+@import "login-form.css";
+@import "quote.css";
+@import "todo.css";
+@import "weather.css";
+@import "config.css";
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 800;
+  color: white;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeout {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(50%);
+  }
+}
+
+.bgimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.fadeout {
+  filter: brightness(100%);
+  animation: fadeout 500ms ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadein {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes fadeinQuit {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.center-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fadein {
+  visibility: hidden;
+  opacity: 0;
+  animation: fadein 300ms ease-in-out forwards;
+}
+
+.fadein-quit {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeinQuit 300ms ease-in-out forwards;
+}
+
+.welcome-animation {
+  visibility: hidden;
+  opacity: 0;
+  animation: fadein 500ms ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+#clock {
+  font-size: 50px;
+  margin-bottom: 25px;
+}

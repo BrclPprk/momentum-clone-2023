@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <div class="config welcome-animation">
+      <i class="fa-solid fa-gear fa-xl"></i>
+      <ul class="config__list hidden">
+        <li class="config__list--components">
+          <span class="config__list--title">Beginning animation</span>
+          <div class="switch__wrapper">
+            <span class="config__list--status">Enable</span>
+            <input
+              type="checkbox"
+              id="switch__bgn-animation"
+              class="switch"
+              checked
+            />
+            <label for="switch__bgn-animation" class="switch__label">
+              <div class="onf__btn"></div>
+            </label>
+          </div>
+        </li>
+        <li class="config__list--components">
+          <span class="config__list--title">Request location</span>
+          <div class="switch__wrapper">
+            <span class="config__list--status">Enable</span>
+            <input
+              type="checkbox"
+              id="switch__req-location"
+              class="switch"
+              checked
+            />
+            <label for="switch__req-location" class="switch__label">
+              <div class="onf__btn"></div>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="center-elements welcome-animation">
+      <h2 id="clock">00:00:00</h2>
+      <form id="login-form" class="hidden">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <input type="submit" value="Log In" />
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+      <div class="todos">
+        <form id="todo-form" class="hidden">
+          <i class="fa-regular fa-pen-to-square"></i>
+          <input
+            type="text"
+            placeholder="Write a To Do and Press Enter"
+            id="todo-input"
+            required
+          />
+          <label for="todo-input">
+            <i class="fa-regular fa-pen-to-square" data-for="todo-input"></i>
+          </label>
+        </form>
+        <ul id="todo-list" class="hidden show-scrollbar"></ul>
+      </div>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/config.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3c0d027687.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

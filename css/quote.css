@@ -1,0 +1,13 @@
+#quote {
+  font-weight: 200;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+#quote span:last-child {
+  margin-top: 8px;
+}
