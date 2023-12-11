@@ -12,6 +12,7 @@
 }
 
 .config__list {
+  width: 350px;
   position: fixed;
   top: 53px;
   left: 1vw;
